@@ -199,7 +199,7 @@ def main(cfg: DictConfig):
         module = SementationModule(net, cfg)
 
         # Train
-        trainer.fit(module, train_dataloader=gan_train_dataloader, val_dataloaders=val_dataloaders)
+        trainer.fit(module, train_dataloaders=gan_train_dataloader, val_dataloaders=val_dataloaders)
 
         # Test
         trainer.test(module, test_dataloaders=test_dataloaders)
